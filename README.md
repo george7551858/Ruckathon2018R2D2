@@ -8,7 +8,7 @@ cd Ruckathon2018R2D2
 npm install
 
 #run
-npm start
+sudo npm run start
 ```
 
 Powered by [spherov2](https://github.com/igbopie/spherov2.js "Sphero API V2") :+1:

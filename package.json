@@ -1,0 +1,16 @@
+{
+  "name": "ruckathon",
+  "version": "1.0.0",
+  "description": "TDC Ruckathon 2018",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src/*",
+    "start": "node src/index.js"
+  },
+  "author": "george.chiu",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "spherov2": "git+https://github.com/george7551858/spherov2.js.git"
+  }
+}
