@@ -6,7 +6,7 @@ const url = require('url');
 const { R2D2 } = require('spherov2');
 const { wait } = require('../node_modules/spherov2/lib/utils.js');
 const { findR2D2 } = require('../node_modules/spherov2/lib/examples/lib/scanner.js');
-
+const { Event } = require('../node_modules/spherov2/lib/toys/core.js');
 
 const app = express();
 const router = express.Router();
@@ -318,6 +318,12 @@ const main = async () => {
   if (sphero) {
     cmdPlay(sphero);
     apiRun(sphero);
+
+    await sphero.configureCollisionDetection();
+    sphero.on(Event.onCollision, () => {
+      console.log('COLLISION');
+      sphero.playAudioFile(1);
+    });
   }
 };
 
